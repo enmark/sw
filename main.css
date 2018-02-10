@@ -1,0 +1,42 @@
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background: linear-gradient(to right, #085078, #85d8ce);
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title {
+    color: white;
+    padding: 20px 0;
+}
+
+#todoInput {
+    margin: 10px 0;
+    border: 2px solid white;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.8);
+    max-width: 100%;
+    font-size: 1em;
+    padding: 0 10px;
+}
+
+#todoInput:focus {
+    outline: 0;
+}
+
+.todo {
+    color: rgba(255,255,255,0.8);
+    margin: 5px 0;
+}
+
