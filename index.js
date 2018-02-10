@@ -1,5 +1,7 @@
 console.log('index.js here!')
 
+navigator.serviceWorker.register('sw.js')
+
 function addTodo(event) {
     event.preventDefault()
     const child = document.createElement('div')
