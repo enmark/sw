@@ -7,7 +7,8 @@ self.addEventListener('install', event => {
             'index.html',
             'index.js',
             'main.css',
-            'assets/icon.png'
+            'assets/icon.png',
+            'assets/icon-2x.png'
         ])})
         .then(() => {
             console.log('Service worker installed!')
