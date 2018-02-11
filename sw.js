@@ -15,12 +15,16 @@ self.addEventListener('install', event => {
         .then(cache => {cache.addAll(filesToCache)})
         .then(() => {
             console.log('Service worker installed!')
+            self.skipWaiting()
         })
     )
 })
 
 self.addEventListener('activate', event => {
     console.log('sw activated!')
+    if (self.clients && clients.claim) {
+        clients.claim()
+    }
 })
 
 self.addEventListener('fetch', event => {

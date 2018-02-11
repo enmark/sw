@@ -1,6 +1,8 @@
 console.log('index.js here!')
 
-navigator.serviceWorker.register('sw.js')
+if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('sw.js')
+}
 
 function addTodo(event) {
     event.preventDefault()
