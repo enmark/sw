@@ -3,7 +3,6 @@ const cacheName = "sw-test-v1"
 const filesToCache = [
     'index.html',
     'index.js',
-    'main.css',
     'assets/icon.png',
     'assets/icon-2x.png',
     'manifest.json'
