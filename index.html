@@ -7,6 +7,7 @@
     <title>Service Worker</title>
     <script defer src="index.js"></script>
     <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="main.css">
 
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,49 +21,6 @@
 
     <link rel="icon" type="image/png" sizes="192x192" href="assets/icon.png">
     <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="assets/icon.png">
-    <style>
-        *,
-        *:after,
-        *:before {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: sans-serif;
-            background: linear-gradient(to right, #085078, #85d8ce);
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .title {
-            color: white;
-            padding: 20px 0;
-        }
-
-        #todoInput {
-            margin: 10px 0;
-            border: 2px solid white;
-            border-radius: 10px;
-            background: rgba(255,255,255,0.8);
-            max-width: 100%;
-            font-size: 1em;
-            padding: 0 10px;
-        }
-
-        #todoInput:focus {
-            outline: 0;
-        }
-
-        .todo {
-            color: rgba(255,255,255,0.8);
-            margin: 5px 0;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
