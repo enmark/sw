@@ -2,7 +2,7 @@
   "name": "Service worker in action",
   "short_name": "SW in action",
   "lang": "en-GB",
-  "start_url": "/",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#085078",
   "background_color": "#085078",
