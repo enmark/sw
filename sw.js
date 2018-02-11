@@ -1,16 +1,18 @@
 const cacheName = "sw-test-v1"
 
+const filesToCache = [
+    'index.html',
+    'index.js',
+    'main.css',
+    'assets/icon.png',
+    'assets/icon-2x.png',
+    'manifest.json'
+]
+
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(cacheName)
-        .then(cache => {cache.addAll([
-            'index.html',
-            'index.js',
-            'main.css',
-            'assets/icon.png',
-            'assets/icon-2x.png',
-            'manifest.json'
-        ])})
+        .then(cache => {cache.addAll(filesToCache)})
         .then(() => {
             console.log('Service worker installed!')
         })
