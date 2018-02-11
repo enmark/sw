@@ -6,7 +6,8 @@ self.addEventListener('install', event => {
         .then(cache => {cache.addAll([
             'index.html',
             'index.js',
-            'main.css'
+            'main.css',
+            'assets/icon.png'
         ])})
         .then(() => {
             console.log('Service worker installed!')
