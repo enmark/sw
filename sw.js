@@ -4,7 +4,6 @@ self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(cacheName)
         .then(cache => {cache.addAll([
-            '/',
             'index.html',
             'index.js',
             'main.css',
@@ -19,10 +18,19 @@ self.addEventListener('install', event => {
 })
 
 self.addEventListener('activate', event => {
-    console.log('hello')
+    console.log('sw activated!')
 })
 
 self.addEventListener('fetch', event => {
+    const url = new URL(event.request.url)
+
+    if (url.pathname === '/') {
+        event.respondWith(caches.match('index.html')
+            .then(response => response || fetch(event.request))
+        )
+        return
+    }
+
     event.respondWith(
         caches.match(event.request)
         .then(response => response || fetch(event.request))
