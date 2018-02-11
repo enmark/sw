@@ -6,8 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Service Worker</title>
     <script defer src="index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.5.6/localforage.min.js"></script>
-    <link rel="stylesheet" href="main.css">
+    <link defer rel="stylesheet" href="main.css">
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="SW in action">
+    <meta name="apple-mobile-web-app-title" content="SW in action">
+    <meta name="theme-color" content="#085078">
+    <meta name="msapplication-navbutton-color" content="#085078">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="assets/icon.png">
 </head>
 <body>
     <div class="container">
