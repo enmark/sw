@@ -42,3 +42,26 @@ self.addEventListener('fetch', event => {
         .then(response => response || fetch(event.request))
     )
 })
+
+self.addEventListener('sync', event => {
+    if (event.tag.startsWith('send-todo')) {
+        event.waitUntil(
+            sendTodo(event)
+        )
+    }
+})
+
+function sendTodo(event) {
+    const todoNumber = event.tag.split('-').slice(-1)[0]
+    const todo = `todo${todoNumber}`
+    console.log(`${todo} SENT!`)
+    broadcast({action: 'todo-sent', todo})
+}
+
+function broadcast(message) {
+    clients.matchAll().then(clients => {
+        for (const client of clients) {
+            client.postMessage(message)
+        }
+    })
+}
