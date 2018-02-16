@@ -1,12 +1,12 @@
-const cacheName = "sw-test-v1"
+const cacheName = "sw-test-v2"
 
 const filesToCache = [
-    'index.html',
-    'index.js',
-    'main.css',
-    'assets/icon.png',
-    'assets/icon-2x.png',
-    'manifest.json'
+    '/index.html',
+    '/index.js',
+    '/main.css',
+    '/assets/icon.png',
+    '/assets/icon-2x.png',
+    '/manifest.json'
 ]
 
 self.addEventListener('install', event => {
