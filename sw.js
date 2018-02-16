@@ -30,7 +30,7 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
     const url = new URL(event.request.url)
 
-    if (url.pathname === '/') {
+    if (url.pathname === '.') {
         event.respondWith(caches.match('index.html')
             .then(response => response || fetch(event.request))
         )
