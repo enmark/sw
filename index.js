@@ -21,6 +21,7 @@ if (navigator.serviceWorker) {
             })
         })
 } else {
+    const form = document.getElementById('todoForm')
     form.addEventListener('submit', event => {
         event.preventDefault()
         addTodo()
