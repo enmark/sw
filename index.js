@@ -20,6 +20,11 @@ if (navigator.serviceWorker) {
                 })
             })
         })
+} else {
+    form.addEventListener('submit', event => {
+        event.preventDefault()
+        addTodo()
+    })
 }
 
 function addTodo() {
